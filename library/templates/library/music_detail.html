@@ -1,0 +1,9 @@
+{% extends "library/base.html" %} {% block content %}
+<section class="page-section bg-secondary text-white mb-0">
+	<div class="container">
+		<h2 class="page-section-heading text-center text-uppercase text-white">Song {{ object.id }} Details</h2>
+		<h2 style="color: white;">Song Name :  {{ object.songTitle }}</h2> <small class="text-muted">Created on:  {{ object.dateCreated|date:"F d, Y" }}</small>
+		<p class="article-content">Artist : {{ object.Artist }}</p>
+		<div> <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'music-update' object.id %}">Update</a> <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'music-delete' object.id %}">Delete</a> </div>
+	</div>
+</section> {% endblock content %}

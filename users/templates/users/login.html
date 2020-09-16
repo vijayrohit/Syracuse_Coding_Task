@@ -1,0 +1,24 @@
+{% extends 'library/base.html' %} {% load crispy_forms_tags %} {% block content %}
+<header class="masthead bg-secondary text-white text-center" id="#home">
+	<div class="container d-flex align-items-center flex-column">
+		<!-- Masthead Heading-->
+		<h1 class="masthead-heading text-uppercase mb-0">Music App</h1>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- Masthead Subheading-->
+	</div>
+</header>
+<section class="page-section bg-secondary text-white mb-0" id="register">
+	<div class="container">
+		<!-- About Section Heading-->
+		<form class="form-signin" method="POST"> {% csrf_token %}
+			<h1 class="h3 mb-3 font-weight-normal">Login</h1> {{ form|crispy }}
+			<button class="btn btn-xl btn-outline-light" type="submit"> Login </button>
+		</form>
+		<p>Do not have an Account? <a href="{% url 'register' %}" style="color: black;"> Sign Up Now!</a></p>
+	</div>
+</section> {% endblock content %}

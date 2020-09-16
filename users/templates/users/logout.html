@@ -1,0 +1,19 @@
+{% extends 'library/base.html' %} {% block content %}
+<header class="masthead bg-secondary text-white text-center" id="#home">
+	<div class="container d-flex align-items-center flex-column">
+		<!-- Masthead Heading-->
+		<h1 class="masthead-heading text-uppercase mb-0">Music App</h1>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- Masthead Subheading-->
+	</div>
+</header>
+<section class="page-section bg-secondary text-white mb-0" id="register">
+	<div class="container">
+		<p>Want to login again? <a href="{% url 'login' %}" style="color: black;"> Login!</a></p>
+	</div>
+</section> {% endblock content %}
